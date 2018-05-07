@@ -20,6 +20,25 @@ extra-source-files:
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
 
+default-extensions:
+    - DeriveFunctor
+    - DeriveGeneric
+    - DeriveTraversable
+    - FlexibleContexts
+    - FlexibleInstances
+    - FunctionalDependencies
+    - LambdaCase
+    - MultiParamTypeClasses
+    - NamedFieldPuns
+    - NoImplicitPrelude
+    - OverloadedStrings
+    - ScopedTypeVariables
+    - StandaloneDeriving
+    - TupleSections
+    - TypeApplications
+    - TypeOperators
+    - ViewPatterns
+
 dependencies:
     - base >= 4.7 && < 5
     - basic-prelude
@@ -53,12 +72,15 @@ module Lib
 
 ) where
 
+import BasicPrelude
+
 unremarkable :: ()
 unremarkable = ()
 
 {-# START_FILE app/Main.hs #-}
 module Main where
 
+import BasicPrelude
 import Lib
 
 main :: IO ()
