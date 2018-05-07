@@ -22,6 +22,9 @@ description:         Please see the README on GitHub at <https://github.com/{{gi
 
 dependencies:
     - base >= 4.7 && < 5
+    - basic-prelude
+    - safe
+    - text
 
 library:
     source-dirs: src
