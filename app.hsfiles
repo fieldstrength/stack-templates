@@ -120,6 +120,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 .stack-work/
 {{name}}.cabal
 *~
+dist/
 
 {-# START_FILE stack.yaml #-}
 
