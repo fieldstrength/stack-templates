@@ -46,6 +46,9 @@ dependencies:
     - text
 
 library:
+    ghc-options:
+        - -Wall
+        - -j
     source-dirs: src
 
 executables:
@@ -72,7 +75,7 @@ module Lib
 
 ) where
 
-import BasicPrelude
+import BasicPrelude ()
 
 unremarkable :: ()
 unremarkable = ()
