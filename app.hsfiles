@@ -59,8 +59,12 @@ executables:
             - -threaded
             - -rtsopts
             - -with-rtsopts=-N
-            - -Wall
             - -j
+            - -Wall
+            - -Wredundant-constraints
+            - -Wcompat
+            - -Wincomplete-record-updates
+            - -Wincomplete-uni-patterns
         dependencies:
             - {{name}}
 
