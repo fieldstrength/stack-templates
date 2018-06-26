@@ -16,3 +16,11 @@ For another approach to the same task, see [summoner](https://github.com/kowaini
 ### app.hsfiles
 
 For applications. In addition to `BasicPrelude`, it adds a couple dependencies that I always end up using: `text` and `safe` (for fixed versions of prelude functions like `headMay`, `tailSafe`, [Partial](https://www.stackage.org/haddock/lts-11.11/safe-0.3.17/Safe-Partial.html#t:Partial), etc.)
+
+### lib
+
+Start a library-only package using BasicPrelude.
+
+### Universum
+
+Start a new library based on the [universum](http://hackage.haskell.org/package/universum) prelude, which seems promising.

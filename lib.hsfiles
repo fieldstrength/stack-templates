@@ -11,13 +11,9 @@ extra-source-files:
     - README.md
     - ChangeLog.md
 
-# Metadata used when publishing your package
 # synopsis:            Short description of your package
 # category:            Other
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
 
 default-extensions:
@@ -55,23 +51,6 @@ library:
         - -Wincomplete-uni-patterns
     source-dirs: src
 
-executables:
-    {{name}}-exe:
-        main:                Main.hs
-        source-dirs:         app
-        ghc-options:
-            - -threaded
-            - -rtsopts
-            - -with-rtsopts=-N
-            - -j
-            - -Wall
-            - -Wredundant-constraints
-            - -Wcompat
-            - -Wincomplete-record-updates
-            - -Wincomplete-uni-patterns
-        dependencies:
-            - {{name}}
-
 {-# START_FILE Setup.hs #-}
 import Distribution.Simple
 main = defaultMain
@@ -88,22 +67,16 @@ import BasicPrelude ()
 unremarkable :: ()
 unremarkable = ()
 
-{-# START_FILE app/Main.hs #-}
-module Main where
-
-import BasicPrelude
-import Lib
-
-main :: IO ()
-main = print unremarkable
 
 {-# START_FILE README.md #-}
 # {{name}}
+
 
 {-# START_FILE ChangeLog.md #-}
 # Changelog for {{name}}
 
 ## Unreleased changes
+
 
 {-# START_FILE LICENSE #-}
 Copyright {{author-name}}{{^author-name}}Author name here{{/author-name}} (c) {{year}}{{^year}}2018{{/year}}
@@ -132,6 +105,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 {{name}}.cabal
 *~
 dist/
+
 
 {-# START_FILE stack.yaml #-}
 
