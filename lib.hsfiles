@@ -56,11 +56,7 @@ import Distribution.Simple
 main = defaultMain
 
 {-# START_FILE src/Lib.hs #-}
-module Lib
-
-    ( unremarkable
-
-) where
+module Lib where
 
 import BasicPrelude ()
 
