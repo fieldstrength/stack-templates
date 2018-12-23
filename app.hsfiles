@@ -131,7 +131,7 @@ dist/
 
 {-# START_FILE stack.yaml #-}
 
-resolver: lts-11.7
+resolver: nightly-2018-12-18
 
 packages:
     - .
