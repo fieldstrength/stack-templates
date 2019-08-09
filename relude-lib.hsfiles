@@ -104,7 +104,7 @@ dist/
 
 {-# START_FILE stack.yaml #-}
 
-resolver: lts-13.16
+resolver: lts-14.0
 
 packages:
     - .
