@@ -21,13 +21,13 @@ default-extensions:
     - DeriveFunctor
     - DeriveGeneric
     - DeriveTraversable
+    - DerivingVia
     - FlexibleContexts
     - FlexibleInstances
     - FunctionalDependencies
     - LambdaCase
     - MultiParamTypeClasses
     - NamedFieldPuns
-    - NoImplicitPrelude
     - OverloadedStrings
     - ScopedTypeVariables
     - StandaloneDeriving
@@ -38,8 +38,6 @@ default-extensions:
 
 dependencies:
     - base >= 4.7 && < 5
-    - basic-prelude
-    - safe
     - text
 
 library:
@@ -57,11 +55,6 @@ main = defaultMain
 
 {-# START_FILE src/Lib.hs #-}
 module Lib where
-
-import BasicPrelude ()
-
-unremarkable :: ()
-unremarkable = ()
 
 
 {-# START_FILE README.md #-}
